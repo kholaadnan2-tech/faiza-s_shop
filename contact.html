@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Khola's Fashion Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <h1>Khola's Fashion Hub</h1>
+        <p class="tagline">Your Style, Your Statement</p>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h2>Contact Us</h2>
+    <p>Use the form below to send us a message. After creating a free Formspree form, replace <code>https://formspree.io/f/yourFormID</code> in the form's <code>action</code> attribute with your Formspree endpoint URL (see README.txt).</p>
+
+    <form id="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required>
+      
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject">
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+      
+      <input type="hidden" name="_subject" value="New message from Khola's Fashion Hub">
+      
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Khola's Fashion Hub. All rights reserved.</p>
+      <div class="social-icons">
+        <span class="icon">📸</span>
+        <span class="icon">📘</span>
+        <span class="icon">💬</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

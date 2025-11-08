@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khola's Fashion Hub | Your Style, Your Statement</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <h1>Khola's Fashion Hub</h1>
+        <p class="tagline">Your Style, Your Statement</p>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner fade-in">
+        <div class="hero-text">
+          <h2>Discover the New You</h2>
+          <p>Explore elegant fashion and timeless trends at Khola’s Fashion Hub.</p>
+          <a class="btn" href="products.html">Shop Now</a>
+        </div>
+        <div class="hero-image">
+          <img src="images/pexels-designecologist-1779487.jpg" alt="Fashion hero image">
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="content container">
+      <h3 class="section-title">Featured Collections</h3>
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="images/pexels-pixabay-38519.jpg" alt="Product 1">
+          <h4>Elegant Dress</h4>
+          <p class="price">PKR 7,499</p>
+        </article>
+        <article class="product-card">
+          <img src="images/pexels-goumbik-574069.jpg" alt="Product 2">
+          <h4>Designer Handbag</h4>
+          <p class="price">PKR 5,999</p>
+        </article>
+        <article class="product-card">
+          <img src="images/pexels-designecologist-1779487.jpg" alt="Product 3">
+          <h4>Stylish Footwear</h4>
+          <p class="price">PKR 6,899</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Khola's Fashion Hub. All rights reserved.</p>
+      <div class="social-icons">
+        <span class="icon">📸</span>
+        <span class="icon">📘</span>
+        <span class="icon">💬</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // small script to add fade-in class when element in view
+  document.addEventListener('DOMContentLoaded', function(){
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+      entries.forEach(function(entry) {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(function(fader) { appearOnScroll.observe(fader); });
+  });
+  </script>
+</body>
+</html>
